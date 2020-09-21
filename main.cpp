@@ -102,7 +102,7 @@ int main(int, char*[])
     auto y_pred_values = y_predict->get_labels();
 
     plotcpp::Plot plt(true);
-    plt.SetTerminal("png");
+    plt.SetTerminal("qt");
     plt.SetOutput("plot.png");
     plt.SetTitle("polynomial regression");
     plt.SetXLabel("x");
@@ -115,7 +115,6 @@ int main(int, char*[])
                                y_pred_values.begin(), "pred", "lc rgb 'red' lw 2"),
                 plotcpp::Points(x_coords.begin(), x_coords.end(), y_coords.begin()
                                 ,"orig", "lc rgb 'black' pt 7"));
-    plt.Flush();
     plt.Flush();
 
     shogun::exit_shogun();
